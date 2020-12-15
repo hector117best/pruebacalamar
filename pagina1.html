@@ -1,0 +1,63 @@
+<html>
+  <head>
+      <script type="text/javascript">
+          var entradas=[1,2,5,-45,34,22,3,4,-220,35,76,356,-64,445,344,345,-122,34,24,67,74,97];
+          var valor_leido=entradas[0];
+          var contador_iteraciones=0;
+          var totalpares=0;
+		  var totalimpares=0;
+		  var totalnumeros=0;
+		  var media;
+          var sumatotal=0;
+		  var contador_positivos=0;
+		  var totalpositivos=0;
+		  var contador_negativos=0;
+		  var totalnegativos=0;
+		  
+		  
+          while (valor_leido!=entradas.length){
+		  
+              if (valor_leido%2==0){
+                totalpares=totalpares + valor_leido;
+				console.log("numero de pares : " +totalpares);
+              } else{
+			     totalimpares= totalimpares + valor_leido;
+				 console.log("numero de impares : " +totalimpares);
+
+			    }
+				
+              contador_iteraciones++;
+              valor_leido=entradas[contador_iteraciones];
+			  totalnumeros= totalnumeros + contador_iteraciones;
+              console.log("numeros existentes en el array :" +totalnumeros);
+			  
+			    if(valor_leido > 0){
+		    contador_positivos ++;
+			totalpositivos= totalpositivos + valor_leido;
+			console.log(" la cantidad de positivos es :" +contador_positivos );
+		    console.log("su suma de positivos es : " +totalpositivos);
+			
+		  } else if(valor_leido< 0){
+		   
+		   contador_negativos ++;
+		   totalnegativos= totalnegativos + valor_leido;
+		   console.log(" la cantidad de negativos es :" +contador_negativos) ;
+            console.log("su suma de negativos es : " +totalnegativos); 
+		   
+		   }
+			  
+          }
+		  
+		      sumatotal=sumatotal+ valor_leido;
+			  media= sumatotal / totalnumeros;
+			  console.log("la media de todos los numeros es :" +media);
+		
+		  
+
+      </script>
+
+  </head>
+  <body>
+    <h1>Ejercicio examen</h1>
+  </body>
+</html>
