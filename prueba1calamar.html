@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>formulario7</title>
+</head>
+<body>
+        <section>
+		<h1><span><strong><legend>  CONTACTO </legend> </span></strong></h1> </br>
+                <fieldset>
+				<legend> informacion del usuario </legend>
+	<p><h1>Deje sus datos y nos pondremos en contacto con usted</h1>
+	</p>
+				
+	 <p>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" required  />
+      </p>
+	  
+	   <p>
+        <label for="nombre">localidad: </label>
+        <input type="text" name="localidad" id="localidad" required  />
+      </p>
+ 
+ 
+      <p>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" id="edad" min="0" max="100" />
+      </p>
+
+			<p>
+			<label for="nombre">localidad: </label>
+        <input type="text" name="localidad" id="localidad" required  />	</p>		
+	
+		<input type="date" name="fecha" value="2020-11-27" />
+		
+		<p>
+					   <label> sugerencias: </label><br/>
+						</p>
+                <form name="formulario" method="get" action="procesar.php">
+                             <p><label>  <textarea name="texto" cols="50" rows="6" spellcheck="false" ></textarea></label></p>
+						
+      
+	    <p>
+    <label for="lista de sleccion">horario de llamada: </label><br/>
+    <select name="opcion" id="listado">
+	<option value="0">selecciona </option>
+      <option value="1">mañana</option>
+      <option value="2">tarde</option>
+	  
+	 </p></br>
+						
+ 
+   <p><input type="submit">  <input type="reset"></p>
+  
+  
+
+                     
+                </form>
+                
+        </section>
+  
+     
+
+  
+</body>
+
+
+
+
+
+
+
+</html>
