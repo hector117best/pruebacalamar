@@ -1,0 +1,233 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+<style>
+/*Menu responsivo*/
+#menuA {display:none;}
+/*.showhim {display:none;}*/ 
+nav{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+        nav a{
+            border-radius: 5px; padding: 2px 5px 5px 5px;  
+            text-decoration: none; color: #000000;    /* No visitado */
+            background: #FFFFFF;
+        }
+        nav a.visited{
+            text-decoration: none; color: #696969;    /* Visitado */
+        }
+        nav a.active{
+            text-decoration: none; color: #800000;    /* Ultimo visitado */
+        }
+        nav a:hover{
+            text-decoration: none; color: #FFFFFF;    /* Color paso raton */
+            background: #FF0000;
+        }
+        
+#menuA {   
+    position: absolute; 
+    
+    font-weight: 900;
+    font-family:verdana,arial; /*tipo de letra*/  
+	
+    width: 30%; 
+    min-width: 200px; 
+    line-height: 20pt; /*separación entre lineas*/ 
+    z-index: 4; 
+}  
+    
+.showme{                 /* Capa emergente */ 
+    position: absolute; 
+    margin-left: -17rem;
+	margin-top: -1rem;
+    padding: 0.5rem 1.5rem 0.5rem 0.3rem; 
+    width: 12rem; 
+    background-color: #000; 
+    display: none; 
+    text-align: left; 
+    line-height: 2.5rem;
+    border-radius: 5px; 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+} 
+.showhim:hover .showme{ 
+    display: block; 
+}
+
+.menumov {
+    position: absolute;
+    text-align: center;
+    margin-top:-3.3rem;
+	margin-left:-267px;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    text-decoration: none; 
+    color: #FFF; 
+    border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    background: #FF0000;
+}  
+
+#email {width:99%;}
+#tuemail {width:70%;}
+#cabecera {width:100%;display:block;}
+#menu {width:50%;float:right;display:inline-block;}
+#slider{width:100%;height:auto;display:block;margin: 10px auto;}
+#tuweb {display: inline-block;}
+#logo{font-size:26px;color:#e14ced;} 
+#izquierda{display:block;max-width:40%;float:left;padding:5px;}
+#medio{margin-top:21px;margin-right:47px;margin-left:-18px;float:left;max-width:20%;border:20px solid white;background-color:blue;text-align:center;}
+#derecha{display:block;float:left;max-width:34%;margin-top: 20px;}
+.boton {width:100%;border:3px solid grey;background-color:white;padding:20px;margin-top:20px;margin-bottom:20px;font-size:2em;color:grey;}
+input#botonform {width:6em;margin-top:8px;margin-bottom:8px;color:white;font-size:1.6em;background-color:red;}
+
+p.articulo {max-width:98%;font-size:1.4em;}
+h2#titulo{font-size:2.2em;color:blue;text-align:center;}
+h2#email{font-size:2em;color:white;text-align:center;}
+ul {
+  display: flex;
+  justify-content:right;  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+
+li {
+  float: left;padding:10px;
+}
+ul a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+li:last-child a {
+  margin-right: 0;
+}
+
+a:link, a:visited, a:focus {
+  background: yellow;
+}
+
+a:hover {     
+  background: orange;
+}
+
+a:active {
+  background: red;
+}
+#pie{font-size:2em;padding-top:10px;text-align:center;bottom:0;clear:both;display:block;width:100%;height:50px;background-color:purple;color:white;}
+ 
+@media (max-width: 1350px) {
+	#medio{border:none;margin-left: 1px;}
+	}
+@media (max-width:1150px){
+	.boton {padding: 17px;font-size: 1.5em;}
+	h2#email {font-size:1.8em;}
+	p.articulo {font-size:1.2em;}
+	#izquierda {max-width:35%;}
+	#medio{max-width:23%;}
+}	
+@media (max-width: 1000px) {
+    .boton {padding: 12px;font-size: 1em;}
+	h2#email {font-size:1.6em;}
+	p.articulo {font-size:1.2em;}
+	#izquierda {margin-top:-23px;max-width:35%;}
+	#medio{max-width:23%;}
+	
+    }
+
+@media (max-width:800px) {
+	#pie{font-size:1.2em;}
+#tuweb {display: block;text-align:center;}
+#cabecera {text-align: center;}
+#menu{float:none;}
+ul{justify-content: center;}
+#izquierda{max-width:100%;}
+#medio {max-width:100%;width:100%;}
+#derecha{max-width:100%;}
+.boton{font-size:2.2em;}
+}
+
+@media (max-width: 500px) {
+ .elivi{display:none;} 
+ #tuweb{float:left;}
+ .menumov {margin-top:0;margin-left:60px;}
+ .showme{margin-left:60px;margin-top:30px;}
+ #menuA {display:block;}
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/ejercicio12_diseno1.css" />
+<title>La web de educación</title>
+<meta charset="utf-8" />
+
+</head> 
+<body>
+<main>
+<header>
+<div id="cabecera">
+<div id="tuweb">
+<img width="480" src="img/logotipo.png" id="logo" />
+</div>
+
+<div id="menu">
+	<nav>
+
+	<ul class="elivi">
+		<li><a href="index.html">INICIO</a></li>
+		<li><a href="sobrenosotros.html">QUIENES SOMOS</a></li>
+		<li><a href="consejos.html">QUE ESTUDIAR</a></li>
+		<li><a href="cursos.html">CURSOS</a></li>
+		<li><a href="contacto.html">CONTACTO</a></li>
+	</ul>
+	<div id="menuA"> 
+        <div class="showhim"><span class="menumov">MENÚ &#8803;</span> 
+            <div class="showme"> 
+                <li><a href="index.html">INICIO</a></li>
+		<li><a href="sobrenosotros.html">QUIENES SOMOS</a></li>
+		<li><a href="consejos.html">QUE ESTUDIAR</a></li>
+		<li><a href="cursos.html">CURSOS</a></li>
+		<li><a href="contacto.html">CONTACTO</a></li>
+            </div>  
+
+	</nav>
+</div>
+</div>
+<img id="slider" src="img/banner.jpg" alt="imagen1" />
+
+</header>
+
+<section>
+
+<div id="izquierda">
+<h2 id="titulo">COMIENZA TU FUTURO</h2>
+<p class="articulo">Bienvenid@ ¿Te gustaría aprender una profesión que te haga destacar y resalte tus pasiones? En web educativa contamos con los mejores planes de educación a distancia del mercado.</p>
+<p class="articulo">Sólo trabajamos con los mejores docentes y los mejores materiales para tu éxito.</p>
+<p class="articulo">Explora nuestra web para ver que ofrecemos y si no lo encuentras contacta con nosotros. <mark>¡Porque somos diferentes!</mark></p>
+</div>
+
+</section>	
+<hr>
+<section>
+<br />
+ <h1>¿QUE CURSO ELEGIR?</h1>
+ <p id="venta">Esta es una pregunta muy frecuente. Desgraciadamente nos han enseñado a estudiar lo que es aceptado por la sociedad. Desde webeducativa nolo hacemos así. iTe enseñaremos a sacar lo mejor de ti en base a tus verdaderas habilidades y pasiones. Porque si haces lo que amas y lo haces bien alcanzarás tus verdaderas posibilidades. <span style="color:red;">Comienza hoy tu carrera de éxito.</span>
+ </p>
+</section>
+
+</main>
+<div id="pie">
+<footer>WEB EDUCATIVA S.A. © TODOS LOS DERECHOS RESERVADOS 2020</footer>                  
+</div>
+</body>  
+</html>
